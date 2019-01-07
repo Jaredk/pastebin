@@ -11,3 +11,16 @@ sudo nano /etc/snmp/snmp.conf
   uncomment #mibs line
 
 
+sudo vim /etc/snmp/snmpd.conf
+>
+>createUser bootstrap MD5 asdfghjkl DES
+>rwuser bootstrap priv
+>rwuser demo priv
+
+sudo systemctl restart snmpd
+
+snmpget -u bootstrap -l authPriv -a MD5 -x DES -A asdfghjkl -X asdfghjkl 127.0.0.1 1.3.6.1.2.1.1.1.0
+
+# the above confirms the snmpv3 credentials and server are running, on to golang now.
+
+

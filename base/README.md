@@ -18,3 +18,9 @@ local disposables
 
 historic config backups
 log2rotate?
+
+This will run golang cronjobs,
+configured by one crontab,
+they will read snmp and send statsd
+they will store backups
+they will rotate backups
