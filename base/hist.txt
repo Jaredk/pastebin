@@ -1,0 +1,13 @@
+# Eventually setting up golang cronjob to
+# read snmp and send statsd to prometheus to grafana
+
+sudo apt-get update
+sudo apt-get install snmp snmp-mibs-downloader
+
+sudo apt-get install snmpd
+
+# line was already uncommented? extra package fix?
+sudo nano /etc/snmp/snmp.conf
+  uncomment #mibs line
+
+
