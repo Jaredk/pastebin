@@ -1,29 +1,24 @@
 Keep to nothing special.
 
-wirecutter
-
 ubuntu
-github/gitlab
+github
 golang
 vim
 
 snmp
-statsd
 prometheus
 grafana
+loki
 
-3 2 1 backups
-backblaze
-local disposables
+3 2 1 backups (docean, rpi, usbkeys)
+backblaze?
+local disposables, swapped and shipped regularly.
+one machine backs things up. (rpi)
+Keep rotations in three places
+Keep copies in all three up to date.
+Log to local syslog (crontab time command 2>&1 | /usr/bin/logger -t "tag") 
+a separate service will copy lines to remote server.
 
-historic config backups
-log2rotate?
-
-This will run golang cronjobs,
-configured by one crontab,
-they will read snmp and send statsd
-they will store backups
-they will rotate backups
 
 services will be authenticated and authorized
 using apache pointing to AD/x.509
